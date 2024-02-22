@@ -3,6 +3,7 @@
 
 # ZERO_SHA is used to identify new branches (no corresponding remote branch exists yet).
 ZERO_SHA="0000000000000000000000000000000000000000"
+STYLE_GUIDE_URL="https://github.com/sitek94/lint-branch-name-demo/blob/main/STYLE_GUIDE.md"
 BRANCH_NAME_PATTERN="^ABC\-[0-9]+\-([a-z0-9\-]+)$"
 
 while read local_ref local_sha remote_ref remote_sha; do
@@ -13,7 +14,10 @@ while read local_ref local_sha remote_ref remote_sha; do
 
       # Note: ">&2" is used to ensure error message visibility in command line interfaces and VS Code.
       # It redirects error message to standard error (stderr) 
-      echo -e "\n\n🚫 Error: Branch name \"$branch_name\" does not match the required pattern 'ABC-N-brief-description-lower-kebab-case', where N is at least one number.\n\nPlease use the format 'ABC-1-your-description-here' for branch names.\n\n" >&2
+      echo "\n🚫 Error: Invalid branch name!\n" >&2
+      echo "Branch name \"$branch_name\" does not match the required pattern \"ABC-N-brief-description-in-kebab-case\"\n" >&2
+      echo "📜 Rules:\n- Branch name must start with a ticket number, e.g. \"ABC-123\"\n- Followed by a \"-\"\n- Followed by a kebab-case string\n" >&2
+      echo "Please use the format above for your branch names. See our conventions and standards at:\n🔗 $STYLE_GUIDE_URL\n\n" >&2
 
       exit 1
     fi
