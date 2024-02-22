@@ -1,0 +1,11 @@
+{
+  "name": "lint-branch-name-demo",
+  "description": "Check if a branch name is valid based on a regex using pre-push git hook",
+  "scripts": {
+    "lint:branch-name": "./scripts/lint-branch-name.sh",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11"
+  }
+}
