@@ -33,3 +33,6 @@ The hook should prevent the push, and display an error message:
 
 ![CleanShot 2024-02-22 at 20 27 45@2x](https://github.com/sitek94/lint-branch-name-demo/assets/58401630/c4b57e8e-e3d5-4f4a-a882-63d02e284f81)
 
+## References
+
+- [Husky](https://typicode.github.io/husky/) - setup git hooks easily
