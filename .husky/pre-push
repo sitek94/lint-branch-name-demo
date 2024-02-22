@@ -14,7 +14,7 @@ while read local_ref local_sha remote_ref remote_sha; do
 
       # Note: ">&2" is used to ensure error message visibility in command line interfaces and VS Code.
       # It redirects error message to standard error (stderr) 
-      echo "\n🚫 Error: Invalid branch name!\n" >&2
+      echo "\n\n🚫 Error: Invalid branch name!\n" >&2
       echo "Branch name \"$branch_name\" does not match the required pattern \"ABC-N-brief-description-in-kebab-case\"\n" >&2
       echo "📜 Rules:\n- Branch name must start with a ticket number, e.g. \"ABC-123\"\n- Followed by a \"-\"\n- Followed by a kebab-case string\n" >&2
       echo "Please use the format above for your branch names. See our conventions and standards at:\n🔗 $STYLE_GUIDE_URL\n\n" >&2

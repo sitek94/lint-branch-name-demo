@@ -14,17 +14,20 @@ It checks only new branches, not existing ones.
 ## Usage
 
 Install dependencies:
+
 ```shell
 # Install dependencies
 npm install
 ```
 
 Create an invalid branch:
+
 ```shell
 git checkout -b invalid-branch
 ```
 
 Push the invalid branch:
+
 ```shell
 git push origin invalid-branch
 ```
