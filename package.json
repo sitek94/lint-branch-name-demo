@@ -1,6 +1,7 @@
 {
   "name": "lint-branch-name-demo",
   "description": "Check if a branch name is valid based on a regex using pre-push git hook",
+  "author": "Maciek Sitkowski",
   "scripts": {
     "prepare": "husky"
   },
